@@ -3,39 +3,40 @@
 TekConverter is a Python class designed to facilitate bidirectional conversion between .tek, .json, and .yaml file formats. This utility is particularly useful for integrating configuration files across systems and simplifying interoperability.
 
 ## Key Features
-File Reading and Writing:
+### File Reading and Writing:
 
 - .tek: Supports a custom file format with headers, indices, descriptions, and associated parameters.
 - JSON: A widely used structured data format.
 - YAML: A human-readable data serialization format.
 
-## File Conversion:
+### File Conversion:
 
 Converts between supported formats while preserving data structures and information integrity.
 
-## Error and Warning Handling:
+### Error and Warning Handling:
 
 Returns specific codes to indicate errors and warnings during execution (e.g., file not found, unsupported format, load/write failure).
 
 ## Code Structure
 
-- Status Codes
-Status codes define the outcome of an operation:
+### Status Codes
+
+- Status codes define the outcome of an operation:
   - ERROR_FAILED_TO_LOAD_FILE (-4): Failed to load the input file.
   - ERROR_FAILED_TO_WRITE_FILE (-3): Failed to write the output file.
   - WARNING_FILE_NOT_FOUND (-2): Input file not found.
   - WARNING_UNSUPPORTED_FORMAT (-1): Unsupported file format.
   - SUCCESS (0): Operation completed successfully.
 
-## Class TekConverter
+Class ```TekConverter```
 
 ### Public Method:
 
-#### convert(input: str, output: str) -> int:
-- Accepts the paths for input and output files.
-- Determines the format based on file extensions.
-- Handles reading and writing through format-specific private methods.
-- Returns a status code indicating the result.
+- convert(input: str, output: str) -> int:
+  - Accepts the paths for input and output files.
+  - Determines the format based on file extensions.
+  - Handles reading and writing through format-specific private methods.
+  - Returns a status code indicating the result.
 
 ### Private Methods:
 
