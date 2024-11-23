@@ -86,11 +86,11 @@ Writes the settings dictionary to the .tek format.
 converter = TekConverter()
 
 # Convert from .tek to .json
-status = converter.convert(input="config.tek", output="config.json")
+status = converter.convert(input="ihp130.tek", output="ihp130.json")
 print("Status:", status)  # Displays the status code
 
 # Convert from .json to .yaml
-status = converter.convert(input="config.json", output="config.yaml")
+status = converter.convert(input="ihp130.json", output="ihp130.yaml")
 print("Status:", status)
 ```
 ## Requirements
