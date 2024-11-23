@@ -31,7 +31,7 @@ Status codes define the outcome of an operation:
 
 ### Public Method:
 
-convert(input: str, output: str) -> int:
+#### convert(input: str, output: str) -> int:
 - Accepts the paths for input and output files.
 - Determines the format based on file extensions.
 - Handles reading and writing through format-specific private methods.
@@ -59,24 +59,27 @@ Writes the settings dictionary to the .tek format.
 
 ## Execution Flow
 
-### Verify Input File Existence:
+1. Verify Input File Existence:
 
-If the input file does not exist, returns WARNING_FILE_NOT_FOUND.
+    - If the input file does not exist, returns WARNING_FILE_NOT_FOUND.
 
-### Determine Input and Output Formats:
+2. Determine Input and Output Formats:
 
-Based on file extensions .tek, .json, or .yaml, calls the appropriate reading and writing methods.
-Returns WARNING_UNSUPPORTED_FORMAT for invalid extensions.
-Read Input File:
+    - Based on file extensions .tek, .json, or .yaml, calls the appropriate reading and writing methods.
+    - Returns WARNING_UNSUPPORTED_FORMAT for invalid extensions.
 
-Loads the file's contents into a settings dictionary.
-Write Output File:
+3. Read Input File:
+    - Loads the file's contents into a settings dictionary.
 
-Converts and saves the data to the desired format.
-Return Result:
+4. Write Output File:
 
-Returns the status of the operation using predefined status codes.
-Usage Examples
+    - Converts and saves the data to the desired format.
+
+5. Return Result:
+
+    - Returns the status of the operation using predefined status codes.
+
+## Usage Examples
 
 ```
 converter = TekConverter()
