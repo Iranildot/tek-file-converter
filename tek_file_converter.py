@@ -10,7 +10,7 @@ SUCCESS = 0
 
 class TekConverter:
 
-    def convert(self, input:str, output:str):
+    def convert(self, input:str, output:str) -> int:
 
         settings = dict()
 
@@ -48,7 +48,7 @@ class TekConverter:
 
             return WARNING_FILE_NOT_FOUND
 
-    def __write_yaml(self, settings:dict, output:str) -> None:
+    def __write_yaml(self, settings:dict, output:str) -> bool:
 
         try:
 
@@ -61,7 +61,7 @@ class TekConverter:
 
             return False
 
-    def __write_json(self, settings:dict, output:str) -> None:
+    def __write_json(self, settings:dict, output:str) -> bool:
 
         try:
 
@@ -74,7 +74,7 @@ class TekConverter:
 
             return False
 
-    def __write_tek(self, settings:dict, output:str) -> None:
+    def __write_tek(self, settings:dict, output:str) -> bool:
 
         try:
 
@@ -96,7 +96,7 @@ class TekConverter:
 
             return False
 
-    def __load_yaml(self, settings:dict, input:str):
+    def __load_yaml(self, settings:dict, input:str) -> bool:
 
         try:
 
@@ -120,7 +120,7 @@ class TekConverter:
 
             return False
 
-    def __load_tek(self, settings:dict, input:str) -> dict:
+    def __load_tek(self, settings:dict, input:str) -> bool:
 
         try:
 
